@@ -327,7 +327,7 @@
 					      "5m(kernel)," \
 					      "-(root)"
 
-#changed by bob
+//#changed by bob
 #define CONFIG_CMD_LOADB_X	1
 #define CONFIG_CMD_NAND_YAFFS	1
 #define CONFIG_CMD_NAND_YAFFS_SKIPFB	1
