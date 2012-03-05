@@ -42,3 +42,13 @@ void do_irq (struct pt_regs *pt_regs)
 	u_int32_t intpnd = readl(&irq->INTPND);
 
 }
+
+
+//Apollo +
+
+int arch_interrupt_init (void)
+{
+	return 0;
+}
+//Apollo -
+
