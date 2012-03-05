@@ -1,5 +1,5 @@
 #
-# (C) Copyright 2000-2007
+# (C) Copyright 2006
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
 #
 # See file CREDITS for list of people who contributed to this
@@ -23,27 +23,12 @@
 
 include $(TOPDIR)/config.mk
 
-LIB	:= $(obj)libvideo.a
+LIB 	:= $(obj)libusb_slave.a
 
-COBJS-$(CONFIG_ATI_RADEON_FB) += ati_radeon_fb.o
-COBJS-$(CONFIG_ATMEL_LCD) += atmel_lcdfb.o
-COBJS-$(CONFIG_CFB_CONSOLE) += cfb_console.o
-COBJS-$(CONFIG_S6E63D6) += s6e63d6.o
-COBJS-$(CONFIG_VIDEO_AMBA) += amba.o
-COBJS-$(CONFIG_VIDEO_CT69000) += ct69000.o
-COBJS-$(CONFIG_VIDEO_MB862xx) += mb862xx.o
-COBJS-$(CONFIG_VIDEO_MX3) += mx3fb.o
-COBJS-$(CONFIG_VIDEO_SED13806) += sed13806.o
-COBJS-$(CONFIG_SED156X) += sed156x.o
-COBJS-$(CONFIG_VIDEO_SM501) += sm501.o
-COBJS-$(CONFIG_VIDEO_SMI_LYNXEM) += smiLynxEM.o
-COBJS-$(CONFIG_VIDEO_VCXK) += bus_vcxk.o
-COBJS-y += videomodes.o
-COBJS-y += s3c2410_fb.o
+COBJS 	:= usbin.o  usblib.o  usbmain.o  usbout.o  usbsetup.o usbinit.o interrupt.o
 
-COBJS	:= $(COBJS-y)
-SRCS	:= $(COBJS:.o=.c)
-OBJS	:= $(addprefix $(obj),$(COBJS))
+SRCS 	:= $(COBJS:.o=.c)
+OBJS 	:= $(addprefix $(obj),$(COBJS))
 
 all:	$(LIB)
 

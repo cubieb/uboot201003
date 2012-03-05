@@ -240,6 +240,11 @@ LIBS += drivers/twserial/libtws.a
 LIBS += drivers/usb/gadget/libusb_gadget.a
 LIBS += drivers/usb/host/libusb_host.a
 LIBS += drivers/usb/musb/libusb_musb.a
+ 
+# add usb slave  +
+LIBS += drivers/usb/slave/libusb_slave.a
+# add usb slave  -
+
 LIBS += drivers/usb/phy/libusb_phy.a
 LIBS += drivers/video/libvideo.a
 LIBS += drivers/watchdog/libwatchdog.a
@@ -3044,6 +3049,9 @@ smdk2400_config	:	unconfig
 
 smdk2410_config	:	unconfig
 	@$(MKCONFIG) $(@:_config=) arm arm920t smdk2410 samsung s3c24x0
+ 
+mini2440_config	:	unconfig
+	@$(MKCONFIG) $(@:_config=) arm arm920t mini2440 samsung s3c24x0
 
 spear300_config \
 spear310_config \
