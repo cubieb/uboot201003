@@ -148,7 +148,7 @@
 /*#define CONFIG_BOOTFILE	"elinos-lart" */
 #define CONFIG_BOOTCOMMAND	"nfs 0x30008000 192.168.1.2:/home/bob/image/zImage.img;bootm"
 #define	CONFIG_EXTRA_ENV_SETTINGS					\
-	"tekkaman=bmp d 70000\0 "				\
+	"bob=bmp d 70000\0 "				\
 	"stdin=serial\0"					\
 	"stdout=serial\0"					\
 	"stderr=serial\0"					\
@@ -164,7 +164,7 @@
  * Miscellaneous configurable options
  */
 #define	CONFIG_SYS_LONGHELP				/* undef to save memory		*/
-#define	CONFIG_SYS_PROMPT		"[u-boot@MINI2440]# "	/* Monitor Command Prompt	*/
+#define	CONFIG_SYS_PROMPT		"[MINI2440]# "	/* Monitor Command Prompt	*/
 #define	CONFIG_SYS_CBSIZE		256		/* Console I/O Buffer Size	*/
 #define	CONFIG_SYS_PBSIZE (CONFIG_SYS_CBSIZE+sizeof(CONFIG_SYS_PROMPT)+16) /* Print Buffer Size */
 #define	CONFIG_SYS_MAXARGS		16		/* max number of command args	*/
