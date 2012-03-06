@@ -69,7 +69,7 @@ static ulong get_PLLCLK(int pllreg)
 	return ((CONFIG_SYS_CLK_FREQ * m * 2) /(p << s));
 	else if (pllreg == UPLL)
 #endif
-//tekkaman
+//bob
 	return (CONFIG_SYS_CLK_FREQ * m) / (p << s);
 }
 
@@ -98,7 +98,7 @@ ulong get_HCLK(void)
 #else
 	return((readl(&clk_power->CLKDIVN) & 0x2) ? get_FCLK()/2 : get_FCLK());
 #endif
-//tekkaman
+//bob
 }
 
 /* return PCLK frequency */
