@@ -119,7 +119,7 @@ int board_init (void)
 	gpio->GPACON = 0x007FFFFF;
 
 #if defined(CONFIG_MINI2440) 
-	gpio->GPBCON = 0x00295551;
+	gpio->GPBCON = 0x00055555;//0x00295551
 #else
 	gpio->GPBCON = 0x00044556;
 #endif
